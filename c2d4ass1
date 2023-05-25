@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+ main()
+{
+	char s[100];
+	int i=0,low,dig,spl,upr,ch;
+	low=upr=spl=dig=0;
+	printf("Enter a string:");
+	gets(s);
+	while(s[i]!=0)
+	{
+		ch=s[i];
+		if(ch>='A'&& ch<='Z')
+		upr++;
+		if(ch>='a'&& ch<='z')
+		low++;
+		if(ch>='0'&& ch<='9')
+		dig++;
+		else
+		spl++;
+		i++;
+	}
+	printf("\nlower=%d",low);
+	printf("\nupper=%d",upr);
+}
